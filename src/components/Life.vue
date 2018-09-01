@@ -1,26 +1,33 @@
 <template lang="html">
   <div>
-    <button @click="randomAliveCells()">Gerar células vivas</button>
 
-    <button @click="play()">Vida!</button>
+    <h1>Game of Life</h1>
 
-    <button @click="pause()">Pause</button>
+    <div class="buttons-group">
+      <button @click="randomAliveCells()">Gerar células vivas</button>
 
-    <button @click="reset()">Reset</button>
+      <button @click="play()">Vida!</button>
 
-    <section class="grid" :style="'width:' + parseInt(width - 40) + 'px;'">
-      <div v-for="(x, i) in items" class="row">
-        <div v-for="(y, j) in items[i]"
-          :key="(i)+'-'+(j)"
-          :style="'width:' + boxSize + 'px; height' + boxSize + 'px'"
-          :class="'box alive-' + items[i][j].status" @click="HandGiveLife(i, j)">
+      <button @click="pause()">Pausar</button>
+
+      <button class="reset" @click="reset()">Parar</button>
+    </div>
+
+    <div class="grid-content">
+      <section class="grid" :style="'width:' + parseInt(width - 40) + 'px;'">
+        <div v-for="(x, i) in items" class="row">
+          <div v-for="(y, j) in items[i]"
+            :key="(i)+'-'+(j)"
+            :style="'width:' + boxSize + 'px; height' + boxSize + 'px'"
+            :class="'box alive-' + items[i][j].status" @click="HandGiveLife(i, j)">
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <div v-if="end">
         <h2>Game Over</h2>
     </div>
-    <ul>
+    <ul class="info">
       <li>População: {{alives}}</li>
       <li>Geração: {{generation}}</li>
     </ul>

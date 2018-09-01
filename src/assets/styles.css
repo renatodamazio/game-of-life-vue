@@ -12,7 +12,7 @@ body, html {
 
 .box {
   display: inline-block;
-  outline: 1px solid black;
+  outline: 1px solid #fff;
   width: 15px;
   height: 15px;
   margin-left: -1px;
@@ -35,9 +35,97 @@ body, html {
 }
 
 .grid {
+  
   width: 150px;
   line-height: 0;
   margin: auto;
-  box-shadow: 0px 0px 20px white;
   margin-top: 20px;
+  display: block;
+
+}
+
+.grid-content {
+
+  width: 100%;
+  float: left;
+  position: relative;
+  position: relative;
+
+}
+
+button {
+
+  border: 1px solid #5383dc;
+  margin: 0 3px;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: #99c0ea;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 4px 0px #5784cc;
+  cursor: pointer;
+  display: inline-block;
+  transition: .500s ease-in-out;
+
+}
+
+button.reset {
+
+  background: #ea9999;
+  box-shadow: 0px 4px 0px #cc5762;
+  border: 1px solid #dc538c;
+
+}
+
+button:hover {
+
+  box-shadow: 0px 2px 0px #809cf1; 
+  transform: translateY(1px);
+  background: #809cf1;
+
+}
+
+button.reset:hover {
+
+  background: #f1808f;
+  box-shadow: 0px 2px 0px #bd5252;
+  border: 1px solid #dc538c;
+
+}
+
+
+.buttons-group {
+
+  float: left;
+  width: 100%;
+  margin-bottom: 5px;
+  height: 40px;
+
+}
+
+.info {
+
+  width: 100%;
+  float: left;
+  padding: 9px;
+  color: #fff;
+
+}
+
+.info li {
+
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: 0px 1px 3px #000;
+  margin: 0 10px;
+  padding-top: 20px;
+
+}
+
+h1 {
+
+  color: #fff;
+  margin-bottom: 20px;
+
+
 }
